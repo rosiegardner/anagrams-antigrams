@@ -7,5 +7,9 @@ describe(Anagrams)do
       word = Anagrams.new()
       expect(word.anagram?("tea", "eat")).to(eq(true))
     end
+
+    it('Will respond with "These words are anagrams!" if 2 words are anagrams')
+      word = Anagrams.new()
+      expect(word.anagram?("tea", "eat")).to(eq("These words are anagrams!"))
   end
 end
