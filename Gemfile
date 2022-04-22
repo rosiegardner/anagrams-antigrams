@@ -5,3 +5,5 @@ ruby '2.6.8'
 
 gem 'rspec'
 gem 'pry'
+
+gem 'ruby-dictionary'
