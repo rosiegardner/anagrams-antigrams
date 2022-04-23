@@ -24,7 +24,7 @@ describe(Anagrams)do
   describe('#words?')do
     it('Will check to see if the input are actual words')do
       word = Anagrams.new("pkmn", "kmpn")
-      expect(word.words?).to(eq("You need to put in an actual word!"))
+      expect(word.words?).to(eq("You need to put in an actual word!")) 
     end
   end 
 end
