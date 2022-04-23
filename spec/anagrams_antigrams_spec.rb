@@ -14,7 +14,7 @@ describe(Anagrams)do
       antigram = Anagrams.new()
       expect(antigram.antigrams?("hi", "bye")).to(eq("These words have no letter matches and are antigrams."))
     end
-  end
+  end 
 end
 
 # describe('#initialize')do
