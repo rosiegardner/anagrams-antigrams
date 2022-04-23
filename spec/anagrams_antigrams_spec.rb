@@ -4,15 +4,27 @@ require('anagrams_antigrams')
 describe(Anagrams)do
   describe('#anagrams?')do
     it('Will check to see if 2 words are anagrams')do
-      anagram = Anagrams.new()
-      expect(anagram.anagrams?("tea", "eat")).to(eq("These words are Anagrams!"))
+      anagram = Anagrams.new("tea", "eat")
+      expect(anagram.anagrams?).to(eq("These words are Anagrams!"))
+    end
+
+    it('It will check for the possibility of words having different cases but should still be anagrams')do
+      anagram = Anagrams.new("Tea", "Eat")
+      expect(anagram.anagrams?).to(eq("These words are Anagrams!"))
     end
   end
 
   describe('#antigrams?')do
     it('Will check to see if 2 words are antigrams')do
-      antigram = Anagrams.new()
-      expect(antigram.antigrams?("hi", "bye")).to(eq("These words have no letter matches and are antigrams."))
+      antigram = Anagrams.new("hi", "bye")
+      expect(antigram.antigrams?).to(eq("These words have no letter matches and are antigrams."))
+    end
+  end 
+
+  describe('#words?')do
+    it('Will check to see if the input are actual words')do
+      word = Anagrams.new("pkmn", "kmpn")
+      expect(word.words?).to(eq("You need to put in an actual word!"))
     end
   end 
 end
