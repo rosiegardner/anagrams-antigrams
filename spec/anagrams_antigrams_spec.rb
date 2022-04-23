@@ -2,22 +2,20 @@ require('rspec')
 require('anagrams_antigrams')
 
 describe(Anagrams)do
-  # describe('#initalize')do
-  #   it('Return key end value of word input 1 and 2')do
-  #     words = Anagrams.new("Tea" "Eat")
-  #     expect(words.words).to(eq("tea" "eat"))
-  #   end
-  # end
-  
   describe('#anagrams?')do
     it('Will check to see if 2 words are anagrams')do
-      words = Anagrams.new()
-      expect(words.anagrams?("tea", "eat")).to(eq("These words are Anagrams!"))
+      anagram = Anagrams.new()
+      expect(anagram.anagrams?("tea", "eat")).to(eq("These words are Anagrams!"))
+    end
+  end
+
+  describe('#antigrams?')do
+    it('Will check to see if 2 words are antigrams')do
+      antigram = Anagrams.new()
+      expect(antigram.antigrams?("hi", "bye")).to(eq("These words have no letter matches and are antigrams."))
     end
   end
 end
-
-
 
 # describe('#initialize')do
 #   it('Will return words in downcase')do
