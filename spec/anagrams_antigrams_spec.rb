@@ -2,6 +2,14 @@ require('rspec')
 require('anagrams_antigrams')
 
 describe(Anagrams)do
+  describe('#initialize')do
+    it('Downcases the string arguments, deletes spaces and non letters')do
+      anagrams = Anagrams.new("!#$%^hello$(@9", "3432bye467!")
+      expect(anagrams.word1).to(eq("hello"))
+      expect(anagrams.word2).to(eq("bye"))
+    end
+  end
+
   describe('#anagrams?')do
     it('Will check to see if 2 words are anagrams')do
       anagram = Anagrams.new("tea", "eat")
