@@ -4,7 +4,7 @@ require('anagrams_antigrams')
 describe(Anagrams)do
   describe('#initialize')do
     it('Downcases the string arguments, deletes spaces and non letters')do
-      anagrams = Anagrams.new("!#$%^hello$(@9", "3432bye467!")
+      anagrams = Anagrams.new("!#$%^he llo$(@9", "3432by e467!")
       expect(anagrams.word1).to(eq("hello"))
       expect(anagrams.word2).to(eq("bye"))
     end
@@ -35,4 +35,11 @@ describe(Anagrams)do
       expect(word.words?).to(eq("You need to put in an actual word!")) 
     end
   end 
+
+  describe('#palindrome?')do
+    it('Will check to see if the input are a palindrome')do
+      palindrome = Anagrams.new("racecar", "racecar")
+      expect(palindrome.palindrome?).to(eq("This anagram is a palindrome!"))
+    end
+  end
 end
