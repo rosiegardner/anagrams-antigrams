@@ -16,11 +16,11 @@
 * Navigate to the top-level of directory.
 * Open VScode.
 * CD into root directory and bundle install project
-* Run all specs and scripts in root directory
+* Run all scripts in root directory
 
 ## Known Bugs
 
-* Unfinished 
+* NO KNOWN BUGS
 
 ## License
 
