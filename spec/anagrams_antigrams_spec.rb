@@ -29,17 +29,17 @@ describe(Anagrams)do
     end
   end 
 
-  describe('#words?')do
-    it('Will check to see if the input are actual words')do
+  describe('#words?')do  
+    it('Will check to see if the input are not actual words')do
       word = Anagrams.new("pkmn", "kmpn")
-      expect(word.words?).to(eq("You need to put in an actual word!")) 
+      expect(word.words?).to(eq(true)) 
     end
   end 
 
   describe('#palindrome?')do
-    it('Will check to see if the input are a palindrome')do
+    it('Will check to see if the input is an anagram and also a  palindrome')do
       palindrome = Anagrams.new("racecar", "racecar")
-      expect(palindrome.palindrome?).to(eq("This anagram is a palindrome!"))
+      expect(palindrome.palindrome?).to(eq("This anagram is also a palindrome!"))
     end
   end
 end
